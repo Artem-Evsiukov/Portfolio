@@ -1,0 +1,84 @@
+.header {
+  width: 100%;
+  
+  @include media('>=tablet') {
+    max-width: 8.4rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #8fc4bb;
+    padding: 1rem 1rem;
+    @include media('>=tablet') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 8.4rem;
+      border-radius: 0px 15px 15px 15px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  @include media('>=tablet') {
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    @include media('>=tablet') {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__item {
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: $base-transition;
+    margin-left: 1rem;
+    @include media('>=tablet') {
+      margin-bottom: 4.8rem;
+      margin-left: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      padding: 0.8rem;
+      border-radius: 50%;
+      background-color: $white;
+
+      &:hover {
+        background-color: #ced6c3;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  
+  @include media('>=tablet') {
+    margin-bottom: 4.8rem;
+    text-align: center;
+  }
+
+  a {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

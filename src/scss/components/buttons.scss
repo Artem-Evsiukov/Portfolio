@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 1.4rem 1.5rem;
+  transition: $base-transition;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 5.5rem;
+  color: $white;
+
+  &.primary {
+    border: 2px solid  $header-color;
+    background-color: #68aaf3;
+
+
+    &:hover{
+        background-color: $header-color;
+    }
+  }
+
+  &.secondary {
+  }
+
+  &.tertiary {
+  }
+
+  &.disabled {
+  }
+}

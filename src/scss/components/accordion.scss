@@ -1,0 +1,42 @@
+.accordion {
+  &__title {
+    position: relative;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    &:after {
+      position: absolute;
+      content: "+";
+      right: 20px;
+    }
+    &:hover {
+      background-color: #ddd;
+    }
+    &.active {
+      background-color: #ddd;
+      &:after {
+        content: "-";
+      }
+      & + .accordion__content {
+        max-height: 1000px;
+      }
+    }
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    background-color: white;
+  }
+
+  &__descr {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+}
